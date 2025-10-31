@@ -1,0 +1,41 @@
+{
+  "objects": [
+    {
+      "id": "mug_17",
+      "type": "mug",
+      "pose": [
+        0.2,
+        0.1,
+        0.9
+      ],
+      "affordances": [
+        "grasp:handle",
+        "place:flat"
+      ]
+    },
+    {
+      "id": "sponge_3",
+      "type": "sponge",
+      "pose": [
+        0.21,
+        0.1,
+        0.9
+      ],
+      "affordances": [
+        "grasp:pinch"
+      ]
+    },
+    {
+      "id": "counter_A",
+      "type": "counter",
+      "pose": [
+        0.3,
+        0.0,
+        0.9
+      ],
+      "affordances": [
+        "place"
+      ]
+    }
+  ]
+}

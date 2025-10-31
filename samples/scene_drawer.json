@@ -1,0 +1,28 @@
+{
+  "objects": [
+    {
+      "id": "drawer_A",
+      "type": "drawer",
+      "pose": [
+        0.5,
+        0.2,
+        0.8
+      ],
+      "affordances": [
+        "pull:handle"
+      ]
+    },
+    {
+      "id": "table_1",
+      "type": "table",
+      "pose": [
+        0.52,
+        0.2,
+        0.75
+      ],
+      "affordances": [
+        "place"
+      ]
+    }
+  ]
+}

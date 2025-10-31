@@ -1,0 +1,34 @@
+name: mindgrid-robot-llm
+services:
+  server:
+    build: .
+    image: mindgrid-robot-llm:latest
+    ports: ["8009:8009"]
+    environment:
+      - BACKEND=${BACKEND:-MOCK}
+      - OPENAI_BASE_URL
+      - OPENAI_API_KEY
+      - OPENAI_MODEL
+      - LLAMA_CPP_BASE_URL
+      - LLAMA_CPP_MODEL
+    profiles: ["cpu"]
+
+  server-nvidia:
+    build: .
+    image: mindgrid-robot-llm:latest
+    ports: ["8009:8009"]
+    environment:
+      - BACKEND=${BACKEND:-MOCK}
+      - OPENAI_BASE_URL
+      - OPENAI_API_KEY
+      - OPENAI_MODEL
+      - LLAMA_CPP_BASE_URL
+      - LLAMA_CPP_MODEL
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    profiles: ["nvidia"]

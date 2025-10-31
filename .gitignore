@@ -1,0 +1,20 @@
+.venv*/
+.venv
+.venv2/
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+.vscode/
+.env
+.env.*
+*.log
+# large artifacts
+*.gguf
+*.bin
+*.pt
+*.onnx
+*.npy
+/data/
+/outputs/
+/checkpoints/
