@@ -2,9 +2,9 @@
 
 <p align="center">
   
-| <img src="docs/kitchen.gif" width="420"> | <img src="docs/drawer.gif" width="420"> |
-|---|---|
-| **Kitchen:** Pick → Place | **Drawer:** PullWithCompliance → open |
+| <img src="docs/mindgrid_kitchen_demo.gif" width="420"> | <img src="docs/mindgrid_drawer_demo.gif" width="420"> |
+|--------------------------------------------------------|---|
+| **Kitchen:** Pick → Place                              | **Drawer:** PullWithCompliance → open |
 
 </p>
 **Open, local, and robot-native.** An OpenAI-compatible server that returns **structured robot plans** (SkillGraph) via a single tool/function: `robot.plan`.
