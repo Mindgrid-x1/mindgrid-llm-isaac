@@ -7,6 +7,7 @@
 | **Kitchen:** Pick → Place                              | **Drawer:** PullWithCompliance → open |
 
 </p>
+
 **Open, local, and robot-native.** An OpenAI-compatible server that returns **structured robot plans** (SkillGraph) via a single tool/function: `robot.plan`.
 
 Ships with:
