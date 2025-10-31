@@ -1,4 +1,4 @@
-# Mindgrid Robot LLM — Starter Backend
+# Mindgrid Robot LLM alternative to NVIDIA Isaac-style stacks.   Starter Backend
 
 <p align="center">
   
@@ -37,7 +37,7 @@ This is the LLM side of **TaskSafe Graph Planner (TSGP)**. It emits **JSON-only*
 
 ## What’s inside & how it hooks into the stack
 
-- **`/v1/chat/completions`** — OpenAI-compatible. Returns a tool call to `robot.plan` with the plan JSON.
+- **`/v1/chat/completions`** - OpenAI-compatible. Returns a tool call to `robot.plan` with the plan JSON.
 - **Ollama JSON-mode** path: robust parsing of messy outputs (code fences, trailing junk) and automatic cleanup.
 - **TSGP Hooks** ready:
   - `commitPoint` chunks for **Shadow2Real Gate** rollouts
@@ -47,17 +47,17 @@ This is the LLM side of **TaskSafe Graph Planner (TSGP)**. It emits **JSON-only*
 - **ROS-friendly**: canonical skills, deterministic action order, and object IDs that line up with perception/scene graphs.
 
 ### Mindgrid components this backend powers
-- **mindgrid-vision-vlm** — scene graphs + affordances → feeds `object_id`, `drawer_id`, surfaces.
-- **mindgrid-dialogue-ros** — LLM planner + skills orchestrator (this backend slots here).
-- **mindgrid-sim-lab** — Webots/Isaac shadow rollouts at each `commitPoint`.
-- **mindgrid-voice** — faster-whisper (ASR) → plan → Piper/TTS confirmations at commit points.
-- **mindgrid-skill-library** — atomic ROS skills for `Pick/Place/MoveToPose/PullWithCompliance/Release`.
+- **mindgrid-vision-vlm** - scene graphs + affordances → feeds `object_id`, `drawer_id`, surfaces.
+- **mindgrid-dialogue-ros** - LLM planner + skills orchestrator (this backend slots here).
+- **mindgrid-sim-lab** - Webots/Isaac shadow rollouts at each `commitPoint`.
+- **mindgrid-voice** - faster-whisper (ASR) → plan → Piper/TTS confirmations at commit points.
+- **mindgrid-skill-library** - atomic ROS skills for `Pick/Place/MoveToPose/PullWithCompliance/Release`.
 
 Use this backend as the **planning brain** that keeps the rest honest.
 
 ---
 
-## 📦 Quick start — MOCK (no models required)
+## 📦 Quick start - MOCK (no models required)
 
 ```bash
 # 1) Create and activate a venv (optional)
@@ -76,7 +76,7 @@ You’ll see a valid plan for kitchen (`Pick → Place`) and a drawer open plan 
 
 ---
 
-## 🧱 Quick start — OPENAI_COMPAT with **Ollama** (fully local, free)
+## 🧱 Quick start - OPENAI_COMPAT with **Ollama** (fully local, free)
 
 ### 1) Install & start Ollama
 ```bash
@@ -114,7 +114,7 @@ If a model gets creative, the server repairs/prunes or falls back to a valid moc
 
 ---
 
-## ⚙️ Quick start — OPENAI_COMPAT with **vLLM** (GPU, native tools)
+## ⚙️ Quick start - OPENAI_COMPAT with **vLLM** (GPU, native tools)
 
 ```bash
 pip install vllm
@@ -132,7 +132,7 @@ python scripts/quick_test.py
 
 ---
 
-## 🐑 Quick start — **LLAMA_CPP** backend
+## 🐑 Quick start - **LLAMA_CPP** backend
 
 ```bash
 export BACKEND=LLAMA_CPP
@@ -218,7 +218,7 @@ python scripts/quick_test.py
 
 - `samples/scene_kitchen.json`
 - `samples/scene_drawer.json`
-- `scripts/quick_test.py` — runs both scenes and prints the canonical plan
+- `scripts/quick_test.py` - runs both scenes and prints the canonical plan
 
 Run:
 ```bash
